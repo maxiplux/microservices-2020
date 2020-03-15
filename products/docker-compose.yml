@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+#  web:
+#    build: .
+#    container_name: products
+#    volumes:
+#      - ./composeexample:/code
+#    ports:
+#      - "8080:8080"
+#    links:
+#      - postgres
+#
+#    depends_on:
+#      - postgres
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+volumes:
+  dbdata:
